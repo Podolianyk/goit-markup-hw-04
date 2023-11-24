@@ -72,6 +72,7 @@ img {
   display: flex;
   gap: 40px;
 }
+
 .contacts-list {
   display: flex;
   gap: 40px;
@@ -88,6 +89,21 @@ img {
 .menu-link:hover,
 .menu-link:focus {
   color: #404bbf;
+}
+.current {
+  position: relative;
+  color: #404bbf;
+}
+.menu-link.current::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #404bbf;
+  bottom: -1px;
+  left: 0;
 }
 .contacts {
   font-style: normal;
@@ -106,8 +122,15 @@ img {
 }
 /*================================Section 1===================================*/
 .main-solutions {
-  background-color: #2e2f42;
   padding: 188px 0;
+  background-color: #2e2f42;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero/people-office.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .main-title {
   font-size: 56px;
@@ -156,6 +179,26 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+.benefits-list-icons {
+  display: flex;
+  gap: 24px;
+}
+.benefits-icon-items {
+  position: relative;
+  width: 264px;
+  height: 112px;
+  width: calc((100% - 72px) / 4);
+  margin-bottom: 8px;
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
+  background: #f4f4fd;
+}
+.benefits-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .benefits-title {
   color: #2e2f42;
@@ -218,6 +261,30 @@ img {
   letter-spacing: 0.02em;
   color: #434455;
   text-align: center;
+  margin-bottom: 8px;
+}
+.social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.social-list-items {
+  width: 40px;
+  height: 40px;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  width: 100%;
+  height: 100%;
+}
+.social-icon {
+  fill: #f4f4fd;
 }
 /*==============================Section 4=====================================*/
 .portfolio-items {
@@ -271,7 +338,19 @@ img {
   color: #f4f4fd;
   letter-spacing: 0.02em;
   max-width: 264px;
+  margin-right: 120px;
 }
 .footer-link {
+  margin-bottom: 16px;
+}
+.footer-container {
+  display: flex;
+}
+.footer-title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   margin-bottom: 16px;
 }
