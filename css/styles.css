@@ -191,13 +191,6 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.benefits-list-icons {
-  display: flex;
-  gap: 24px;
-}
-.benefits-icon-items {
-  width: calc((100% - 72px) / 4);
-}
 .benefits-container-icon-items {
   display: flex;
   justify-content: center;
@@ -208,12 +201,6 @@ img {
   border-radius: 4px;
   margin-bottom: 8px;
   border: 1px solid #8e8f99;
-}
-.benefits-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 .benefits-title {
   color: #2e2f42;
